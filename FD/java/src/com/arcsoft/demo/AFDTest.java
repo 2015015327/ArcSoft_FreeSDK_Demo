@@ -22,8 +22,8 @@ import com.sun.jna.Pointer;
 import com.sun.jna.ptr.PointerByReference;
 
 public class AFDTest {
-    public static final String APPID     = "XXXXXXXXXXXXXXX";
-    public static final String FD_SDKKEY = "YYYYYYYYYYYYYYY";
+    public static final String APPID     = "82ym56BEnhJsVnCrqTTCh4T9k5XxEgspBpAts2vAQcCW";
+    public static final String FD_SDKKEY = "5zTKe5eAdwDr2UKLmjVjG4B7s18y43rfL5HDaMdrWLv4";
 	
     public static final int FD_WORKBUF_SIZE = 20 * 1024 * 1024;
     public static final int MAX_FACE_NUM = 50;
@@ -55,15 +55,15 @@ public class AFDTest {
 
         // load Image Data
         ASVLOFFSCREEN inputImg;
-        if (bUseYUVFile) {
-            String filePath = "001_640x480_I420.YUV";
+        if (bUseRAWFile) {
+            String filePath = "wxq.jpg";
             int yuv_width = 640;
             int yuv_height = 480;
             int yuv_format = ASVL_COLOR_FORMAT.ASVL_PAF_I420;
 
             inputImg = loadYUVImage(filePath, yuv_width, yuv_height, yuv_format);
         } else {
-            String filePath = "003.jpg";
+            String filePath = "IMG_0140.JPG";
 
             inputImg = loadImage(filePath);
         }
